@@ -4,7 +4,7 @@ import { createAppContainer , createSwitchNavigator} from "react-navigation";
 import LoadingScreen from "./screens/LoadingScreen";
 import LoginScreen from "./screens/LoginScreen";
 import RegisterScreen from "./screens/RegisterScreen";
-import NavigationPags from "./screens/NavigationPage";
+import NavigationPage from "./screens/NavigationPage";
 import PostScreen from "./screens/PostScreen";
 
 const AppStack = createStackNavigator({
@@ -32,7 +32,7 @@ export default createAppContainer(
       Auth: AuthStack
     },
     {
-      initialRouteName: "App"
+      initialRouteName: "Loading"
     }
   )
 );
