@@ -3,12 +3,12 @@ import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
 //import firebase from 'firebase';
 
 export default class LoadingScreen extends React.Component {
-   /*  componentDidMount() {
+    componentDidMount() {
         setTimeout(() => {
             this.props.navigation.navigate("Auth");
         }, 10000); 
     }
-    */
+    
     render() {
         return (
 

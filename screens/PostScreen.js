@@ -33,7 +33,6 @@ export default class PostScreen extends React.Component {
     };
 
   // Code inchangé jusqu'à la méthode handlePublish
-
 handlePublish = () => {
     const { message, imageUri } = this.state;
 
