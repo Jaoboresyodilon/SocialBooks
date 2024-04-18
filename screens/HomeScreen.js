@@ -3,13 +3,12 @@ import { View, Text, StyleSheet, Image } from "react-native";
 
 export default class HomeScreen extends React.Component {
     render() {
-        // Récupérer les données passées depuis PostScreen
         const { route } = this.props;
-        const { message, imageUri } = route.params;
+        const { message, imageUri } = route.params || {}; // Utilisation d'une valeur par défaut pour éviter l'erreur
 
         return (
             <View style={styles.container}>
-                <Text style={styles.message}>{message}</Text>
+                {message && <Text style={styles.message}>{message}</Text>}
                 {imageUri && <Image source={{ uri: imageUri }} style={styles.image} />}
             </View>
         );
@@ -33,7 +32,6 @@ const styles = StyleSheet.create({
         borderRadius: 10,
     },
 });
-
 
 
 

@@ -32,25 +32,21 @@ export default class PostScreen extends React.Component {
         }
     };
 
-  // Code inchangé jusqu'à la méthode handlePublish
-handlePublish = () => {
-    const { message, imageUri } = this.state;
+    handlePublish = () => {
+        const { message, imageUri } = this.state;
 
-    // Vérifier si le message est vide
-    if (!message.trim()) {
-        Alert.alert('Message vide', 'Veuillez saisir un message avant de publier.');
-        return;
-    }
+        // Vérifier si le message est vide
+        if (!message.trim()) {
+            Alert.alert('Message vide', 'Veuillez saisir un message avant de publier.');
+            return;
+        }
 
-    // Vérifier l'URI de l'image sélectionnée
-    console.log('Image URI:', imageUri);
-
-    // Naviguer vers la page Home avec les données du message et de l'image
-    this.props.navigation.navigate('Home', {
-        message: message,
-        imageUri: imageUri,
-    });
-};
+        // Naviguer vers la page Home avec les données du message et de l'image
+        this.props.navigation.navigate('Home', {
+            message: message,
+            imageUri: imageUri,
+        });
+    };
 
     render() {
         const { message, imageUri } = this.state;
@@ -58,7 +54,7 @@ handlePublish = () => {
         return (
             <SafeAreaView style={styles.container}>
                 <View style={styles.inputcontainer}>
-                    <Image source={require("../assets/images/login.jpg")} style={styles.avatar}></Image>
+                    <Image source={require("../assets/images/user.jpg")} style={styles.avatar}></Image>
                     <TextInput
                         autoFocus={true}
                         multiline={true}
